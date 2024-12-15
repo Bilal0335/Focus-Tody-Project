@@ -72,13 +72,22 @@ main {
   display: inline-block;
   vertical-align: middle;
   flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-icon {
+  display: none;
 }
 .goal-input {
-  margin-left: 10px;
+  padding-left: 22px;
   font-family: inherit;
   font-size: 13px;
   border: none;
   outline: none;
+  align-self: stretch;
+  width: 100%;
 }
 .goal-input::placeholder {
   color: #d9d9d9;
@@ -100,6 +109,13 @@ main {
   color: #858585;
   margin-bottom: 20px;
 }
+.completed .custom-checkbox {
+  background: #48a300;
+  border-color: #48a300;
+}
+.completed .check-icon{
+  display: block;
+}
 @media (max-width: 768px) {
   .title {
     font-size: 32px;
@@ -115,5 +131,11 @@ main {
   .custom-checkbox {
     height: 20px;
     width: 20px;
+  }
+  .made-with {
+    margin-top: 32px;
+  }
+  .progress-bar {
+    height: 24px;
   }
 }
