@@ -40,6 +40,7 @@ main {
   height: 30px;
   background-color: rgb(233, 242, 226);
   border-radius: 15px;
+  margin-block: 20px;
 }
 .progress-value {
   height: 100%;
@@ -88,14 +89,19 @@ main {
   outline: none;
   align-self: stretch;
   width: 100%;
+  font-weight: 500;
 }
 .goal-input::placeholder {
   color: #d9d9d9;
 }
 .error-label {
   color: #ff5151;
-  font-size: 14px;
-  margin-block: 20px;
+  font-size: 8px;
+  margin-top: 5px;
+  display: none;
+}
+.show-error .error-label{
+  display: block;
 }
 .quote {
   font-weight: 500;
@@ -113,9 +119,16 @@ main {
   background: #48a300;
   border-color: #48a300;
 }
-.completed .check-icon{
+.completed .check-icon {
   display: block;
 }
+.completed .goal-input {
+  color: #48a300;
+  text-decoration: line-through;
+  
+}
+
+
 @media (max-width: 768px) {
   .title {
     font-size: 32px;
