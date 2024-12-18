@@ -51,9 +51,14 @@ main {
   color: #eeffe0;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  width: 0;
+  overflow: hidden;
   font-weight: 300;
   letter-spacing: 1px;
+  /* visibility: hidden; */
+}
+.progress-value span {
+  padding-left: 20px;
 }
 .goal-container {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -100,7 +105,7 @@ main {
   margin-top: 5px;
   display: none;
 }
-.show-error .error-label{
+.show-error .error-label {
   display: block;
 }
 .quote {
@@ -125,9 +130,7 @@ main {
 .completed .goal-input {
   color: #48a300;
   text-decoration: line-through;
-  
 }
-
 
 @media (max-width: 768px) {
   .title {

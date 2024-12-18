@@ -2,15 +2,18 @@ const checkBoxList = document.querySelectorAll(".custom-checkbox");
 const inputField = document.querySelectorAll(".goal-input");
 const errorLabe = document.querySelector(".error-label");
 const progresBar = document.querySelector(".progress-bar");
+const progresValue = document.querySelector(".progress-value");
+
 checkBoxList.forEach((checkBox) => {
   checkBox.addEventListener("click", (e) => {
     const allGoalsAdded = [...inputField].every((input) => {
-      console.log(input.value);
+      // console.log(input.value);
       return input.value;
     });
 
     if (allGoalsAdded) {
       checkBox.parentElement.classList.toggle("completed");
+      progresValue.style.width = "33.33%";
     } else {
       progresBar.classList.add("show-error");
     }
